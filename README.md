@@ -1,0 +1,1 @@
+# dropGalaxy-bypass-with-dynamic-clicking
