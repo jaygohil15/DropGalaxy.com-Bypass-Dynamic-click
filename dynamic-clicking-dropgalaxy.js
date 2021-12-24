@@ -36,6 +36,6 @@
         var link = finalDbtn.getAttribute('action')
         console.log(link)
 
-        var hh = window.open(link, '_blank')*/
+        window.open(link, '_blank')*/
     }, 3000)
 })();
