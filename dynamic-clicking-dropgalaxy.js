@@ -27,16 +27,16 @@
     }*/
     if (ipCheck) {
         console.log(ipCheck)
-        ipCheck.remove()
+        //ipCheck.remove()
         //ipCheck.value = 0
     }
     if (adBlock) {
         console.log(adBlock)
-        adBlock.remove()
+        //adBlock.remove()
     }
     if (adCheck) {
         console.log(adCheck)
-        adCheck.remove()
+        //adCheck.remove()
     }
 
     setTimeout(() => {
