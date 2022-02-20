@@ -10,4 +10,4 @@ Paste code and *save* it.
 - It might not work on second page due to no dynamic waiting time.
 
 ## Note: 
-Allow popup for website in your browser or else popup will be blocked automatically on last step.
+Allow popup for website in your browser or else *popup* will be blocked automatically on last step.
