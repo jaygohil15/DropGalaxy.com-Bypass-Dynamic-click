@@ -8,6 +8,7 @@
 // @match        https://techthematter.xyz/*
 // @match        https://financemonk.net/*
 // @match        https://ruokareseptit.online/*
+// @match        https://a2zapk.com/*
 // @icon         https://www.google.com/s2/favicons?domain=dropgalaxy.com
 // @grant        none
 // ==/UserScript==
@@ -52,15 +53,16 @@
             setTimeout(() => {
             dwnBtn1.click()
                 console.log('clicked')
-            }, 18000)
+            }, 22000)
 
         }
-        const dwnBtn2 = document.getElementById('downloadbtn2')
+        const dwnBtn2 = document.getElementById('dl')
         if (dwnBtn2) {
             setTimeout(() => {
                 dwnBtn2.click()
-                console.log('clicked')
-            }, 3000)
+                //window.open(dwnBtn2.href, '_blank')
+                console.log(dwnBtn2)
+            }, 5000)
         }
         /*var createBtn = document.getElementById('downloadBtnClick')
         if (createBtn) {
