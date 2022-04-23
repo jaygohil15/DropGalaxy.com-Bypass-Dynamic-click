@@ -10,4 +10,4 @@ Paste code and *save* it.
 - It will wait 16 seconds on second page due to waiting time.
 
 ## Note: 
-No need to allow popup. Any type of adblock will not work.
+No need to allow popup. Disable any type of adblock.
