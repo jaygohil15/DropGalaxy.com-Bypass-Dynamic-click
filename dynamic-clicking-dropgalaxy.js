@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DropGalaxy
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       JethaLal_420
 // @match        https://dropgalaxy.com/*
@@ -16,64 +16,39 @@
 (function() {
     'use strict';
 
-    const adBlock = document.getElementById('adblock_detected')
-    const adCheck = document.getElementById('adblock_check')
-    const ipCheck = document.querySelector('body > div.container.pt-5.page.premium.downloadPage > script:nth-child(8)')
-    //var adb = document.getElementById('adb')
+    console.log('---------------------------------')
+    let dwnBtn1, url, dwnBtn2
 
-    /*if (adb) {
-        console.log(adb)
-        adb.remove()
-    }*/
-    if (ipCheck) {
-        console.log(ipCheck)
-        //ipCheck.remove()
-        //ipCheck.value = 0
-    }
-    if (adBlock) {
-        console.log(adBlock)
-        //adBlock.remove()
-    }
-    if (adCheck) {
-        console.log(adCheck)
-        //adCheck.remove()
+    const loaded = () => {
+        // First Download Page
+        dwnBtn1 = document.getElementById('method_free')
+        // Second Download Page
+        dwnBtn2 = document.getElementById('downloadBtnClick')
+        // Third Download Page
+        url = document.getElementById('url')
     }
 
-    setTimeout(() => {
-        const dwnBtn = document.getElementById('method_free')
-        if (dwnBtn) {
-        setTimeout(() => {
-            dwnBtn.click()
-            console.log('clicked')
-        }, 5000)
-        }
-
-        const dwnBtn1 = document.getElementById('downloadbtn')
-        if (dwnBtn1) {
-            setTimeout(() => {
+    let intervalId = setInterval(() => {
+        loaded()
+        if(dwnBtn1) {
+            // First Download Page Bypassed Using simple Click
+            console.log('Download Btn on First Page Clicked')
             dwnBtn1.click()
-                console.log('clicked')
-            }, 22000)
-
+            clearInterval(intervalId)
         }
-        const dwnBtn2 = document.getElementById('dl')
         if (dwnBtn2) {
-            setTimeout(() => {
+            // Second Download Page Bypassed using Simple click 
+            // Will wait 16 seconds
+            setTimeout( () => {
+                console.log('Download Btn on Second Page Clicked')
                 dwnBtn2.click()
-                //window.open(dwnBtn2.href, '_blank')
-                console.log(dwnBtn2)
-            }, 5000)
+            }, 16000)
+            clearInterval(intervalId)
         }
-        /*var createBtn = document.getElementById('downloadBtnClick')
-        if (createBtn) {
-        createBtn.disabled = false
-        createBtn.click()
+        if (url) {
+            clearInterval(intervalId)
+            url = url.value
+            window.open(url, '_self')
         }
-        /*var finalDbtn = document.getElementById('dllink')
-
-        var link = finalDbtn.getAttribute('action')
-        console.log(link)
-
-        window.open(link, '_blank')*/
     }, 1000)
 })();
