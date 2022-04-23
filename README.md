@@ -1,4 +1,4 @@
-# dropGalaxy-bypass-with-dynamic-clicking
+# DropGalaxy Bypasser with Dynamic Clicking
 
 To use this you need [Tampermonkey](https://www.tampermonkey.net/) extension to run scripts in browser.
 
