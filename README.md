@@ -7,7 +7,7 @@ Paste code and *save* it.
 
 ### USE CASE:
 - Script will auto click all three page.
-- It might not work on second page due to no dynamic waiting time.
+- It will wait 16 seconds on second page due to waiting time.
 
 ## Note: 
-Allow popup for website in your browser or else *popup* will be blocked automatically on last step.
+No need to allow popup. Any type of adblock will not work.
