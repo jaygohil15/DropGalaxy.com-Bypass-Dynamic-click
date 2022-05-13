@@ -42,7 +42,7 @@
             setTimeout( () => {
                 console.log('Download Btn on Second Page Clicked')
                 dwnBtn2.click()
-            }, 16000)
+            }, 20000)
             clearInterval(intervalId)
         }
         if (url) {
